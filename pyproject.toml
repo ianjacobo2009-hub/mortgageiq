@@ -1,0 +1,22 @@
+[project]
+name = "mortgageiq"
+version = "1.0.0"
+description = "Mortgage calculator for Colombia (E.A., UVR, VIS) and the USA (PMI, FHA, ARM), in Spanish and English"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Ian · Blue Peak AI & Finance Solutions" }]
+dependencies = ["PySide6>=6.6"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pyinstaller>=6"]
+
+[project.gui-scripts]
+mortgageiq = "mortgageiq.app:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["mortgageiq"]
