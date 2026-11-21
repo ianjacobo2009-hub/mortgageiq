@@ -13,7 +13,7 @@ def test_colombia_fixed_uses_ea_correctly():
     r = colombia(300_000_000, 90_000_000, 20, 12.5)
     assert r.loan == 210_000_000
     assert r.first_payment == pytest.approx(payment(210e6, ea_to_monthly(12.5), 240))
-    # the Lovable prototype treated 12.5 as nominal and charged more
+    # an early prototype treated 12.5 as nominal and charged more
     assert r.first_payment < payment(210e6, 0.125 / 12, 240)
     assert r.effective_annual == pytest.approx(12.5)
     assert r.schedule[-1].balance == pytest.approx(0, abs=1e-3)
