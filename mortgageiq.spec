@@ -9,4 +9,4 @@ exe = EXE(pyz, a.scripts, [], exclude_binaries=True, name="MortgageIQ", console=
 coll = COLLECT(exe, a.binaries, a.datas, name="MortgageIQ")
 if sys.platform == "darwin":
     app = BUNDLE(coll, name="MortgageIQ.app", icon=icon, bundle_identifier="com.bluepeak.mortgageiq",
-                 info_plist={"CFBundleShortVersionString": "1.0.0", "NSHighResolutionCapable": True})
+                 info_plist={"CFBundleShortVersionString": "2.0.0", "NSHighResolutionCapable": True})
